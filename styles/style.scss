@@ -1,0 +1,16 @@
+@import "./_settings";
+
+@import "./app_editImage/style.scss"; //css app edit image
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    background: white;
+    a {
+        margin: 20px;
+    }
+}
