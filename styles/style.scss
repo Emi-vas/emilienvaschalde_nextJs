@@ -1,11 +1,16 @@
 @import "./_settings";
 
 @import "./app_editImage/style.scss"; //css app edit image
+@import "./app_nasa/style.scss";
 
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.space {
+    height: 500px;
 }
 
 .header {
@@ -14,3 +19,4 @@ a {
         margin: 20px;
     }
 }
+

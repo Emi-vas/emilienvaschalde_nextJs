@@ -7,6 +7,7 @@ const Header = ({ cate }) => {
             <nav>
                 <Link href="/" >accueil</Link>
                 <Link href="/retouche-image-app">retouche image</Link>
+                <Link href="/nasa-app">Nasa</Link>
             </nav>
         </div>
     );

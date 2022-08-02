@@ -16,7 +16,7 @@ const BigImage = ({ imageSrc, size, settings, filter}) => {
 
     useEffect(() => {
         //zoom if size of the pic il largeur than the window
-        if(size.width > window.innerWidth) {
+        if(size.width > (window.innerWidth - 20)) {
             if(window.innerWidth > 700) {
                 setZoom(window.innerWidth / size.width * 100 - 3)
             } else {
