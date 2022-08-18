@@ -8,6 +8,7 @@ const AppNasa = () => {
     return (
         <div>
             <h1>Nasa App</h1>
+
             <VideoEarth />
             <DayPicture />
             <Map />

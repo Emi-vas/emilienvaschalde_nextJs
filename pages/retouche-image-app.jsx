@@ -10,7 +10,7 @@ const App = () => {
             <Head>
                 <title>Retouche Image - Emilien Vaschalde</title>
             </Head>
-            <Header />
+            <Header cate="picture" />
             <AppEditImage />
         </div>
     );

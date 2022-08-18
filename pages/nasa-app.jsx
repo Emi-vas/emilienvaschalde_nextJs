@@ -10,7 +10,7 @@ const nasaApp= () => {
             <Head>
                 <title>Nasa App - Emilien Vaschalde</title>
             </Head>
-            <Header />
+            <Header cate="nasa" />
             <AppNasa />
         </div>
     );
