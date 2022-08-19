@@ -31,7 +31,7 @@ const AppEditImage = () => {
 
 
   return (
-    <div>
+    <div className='appEditImage'>
       <h1>Retouche Image</h1>
 
       <div className='main-cont '>
