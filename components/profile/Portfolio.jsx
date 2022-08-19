@@ -12,13 +12,15 @@ const Portfolio = () => {
             title : "App 1",
             desc : "Application de retouche d'image",
             img : "./assets/img/app1.jpg",
-            link: "./retouche-image-app"
+            link: "./retouche-image-app",
+            git: "https://github.com/Emi-vas/edit-image-app"
         },
         {
             title : "App 2",
             desc : "Application de dialogue avec l'api publique de la NASA",
             img : "./assets/img/app2.jpg",
-            link : "./nasa-app"
+            link : "./nasa-app",
+            git: "https://github.com/Emi-vas/nasaApp"
         },
     ]
 
@@ -66,6 +68,8 @@ const Portfolio = () => {
                                 <div className="options">
                                     <From1 />
                                     <Form2 />
+                                    <Link href={app.link} ><button>Voir l'app</button></Link>
+                                    <button><a href={app.git} target="blank">GIT</a></button>
                                 </div>
                             }
                         </>

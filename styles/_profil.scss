@@ -1,6 +1,6 @@
 .head {
     background: #c5d9ee;
-    padding: 20px 0;
+    padding-top: 20px;
     margin-bottom: 300px;
     h1 {
         color: rgb(35, 101, 148);
@@ -9,6 +9,7 @@
     h2 {
         color: rgb(82, 131, 166);
         font-size: 1.5em;
+        margin-bottom: 0;
     }
     & .bottom {
         position: relative;
@@ -19,6 +20,23 @@
         }
         img:last-of-type {
             top: -3px;
+        }
+    }
+}
+@media screen and (max-width: 1100px) {
+    .head {
+        margin-bottom: 150px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .head {
+        font-size: 0.8em;
+        h1 {
+            font-size: 2.7em;
+        }
+        h2 {
+            font-size: 1.2em;
+            padding-bottom: 30px;
         }
     }
 }
@@ -56,6 +74,31 @@
     @keyframes photoProfile {
         to {
             border-radius: 54% 46% 36% 64% / 62% 20% 80% 38% ;
+        }
+    }
+}
+@media screen and (max-width: 1600px) {
+    .section1 {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .section1 {
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .section1 {
+       flex-direction: column;
+    }
+}
+@media screen and (max-width: 700px) {
+    .section1 {
+        font-size: 0.7em;
+        .photo_profile {
+            img {
+                width: 250px;
+            }
         }
     }
 }
@@ -125,12 +168,65 @@
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .language {
+        width: 690px;
+    }
+    @keyframes ball1 {
+        to {
+            transform: translate(-220px, -130px) scale(7);
+            opacity: 0;
+        }
+    }
+    @keyframes ball2 {
+        to {
+            transform: translate(220px, -130px) scale(7);
+            opacity: 0;
+        }
+    }
+    @keyframes ball3 {
+        to {
+            transform: translate(0px, 170px) scale(7);
+            opacity: 0;
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .language {
+        width: 690px;
+    }
+    @keyframes ball1 {
+        to {
+            transform: translate(-100px, -50px) scale(5);
+            opacity: 0;
+        }
+    }
+    @keyframes ball2 {
+        to {
+            transform: translate(75px, -55px) scale(5);
+            opacity: 0;
+        }
+    }
+    @keyframes ball3 {
+        to {
+            transform: translate(0px, 70px) scale(5);
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .language {
+        width: 330px;
+        margin: 30px auto;
+    }
+}
 
 .languageCards {
     color: white;
     display: flex;
-
     justify-content: center;
+    flex-wrap: wrap;
 
     & .card {
         font-size: 1.1em;
@@ -158,6 +254,17 @@
     }
 }
 
+@media screen and (max-width: 700px) {
+    .languageCards {
+        & .card {
+            font-size: 0.9em;
+            width: 130px;
+        }
+    }
+}
+
+
+
 .backTitre {
     color: white;
     background: $blue-bg;
@@ -171,11 +278,17 @@
     margin-top: 30px;
     margin-bottom: 15px;
 }
+@media screen and (max-width: 700px) {
+    .backTitre {
+        font-size: 0.95em;
+        width: 90%;
+    }
+}
 
 .portfolio {
     margin: auto;
     margin-top: 70px;
-    width: 80%;
+    width: 95%;
     position: relative;
     z-index: 3;
 
@@ -251,10 +364,62 @@
             position: absolute;
         }
 
+        button {
+            position: absolute;
+            width: 100px;
+            left: 50px;
+            top: 20px;
+            animation: btn 0.3s 0.5s both;
+        }
+        button:last-of-type {
+            top: 170px;
+        }
+
         @keyframes dash {
             to {
               stroke-dashoffset: 0;
             }
-          }
+        }
+        @keyframes btn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .portfolio {
+        & .app {
+            height: 350px;
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .portfolio {
+        & .app {
+            width: 90%;
+            height: 270px;
+            z-index: 3;
+            &__txt {
+                h3 {
+                    font-size: 1.5em;
+                }
+                p {
+                    font-size: 0.9em;
+                }
+            }
+        }
+        & .options {
+            left: -190px;
+            top: 20px;
+            z-index: 1;
+
+            button {
+                font-size: 0.9em;
+                padding: 15px;
+            }
+        }
     }
 }

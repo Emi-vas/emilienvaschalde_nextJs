@@ -30,6 +30,7 @@ const Header = ({ cate }) => {
                     <div className="lien">
                         <i class="fa-solid fa-comment"></i>
                         <p>Contact</p>
+                        <p></p>
                     </div>
                 </Link>
             </nav>

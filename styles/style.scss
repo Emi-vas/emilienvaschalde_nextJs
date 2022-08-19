@@ -78,3 +78,25 @@ a {
     }
 }
 
+@media screen and (max-width: 700px) {
+    .header {
+        font-size: 0.7em;
+
+        nav {
+            transform: translate(0);
+            padding: 3px 10px;
+        }
+        p:first-of-type {
+            font-size: 0.9em;
+        }
+
+        p:last-of-type {
+            display: none;
+        }
+
+        & .lien {
+            width: 45px;
+            margin: 5px 7px;
+        }
+    }
+}
