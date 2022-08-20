@@ -424,3 +424,67 @@
         }
     }
 }
+
+.messageBox {
+    position: fixed;
+    top: 0;
+    z-index: 30;
+    width: 100%;
+    background: $green;
+    background: url("./assets/bg-message.svg");
+    background-size: 100%;
+    color: white;
+    padding: 15px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: messageBoxOn 0.3s both;
+    & .txt {
+        width: 70%;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        min-width: 400px;
+        max-width: 90%;
+
+        input {
+            margin: 5px 0;
+        }
+
+        button {
+            background: $green;
+            color: white;
+            border-width: 2px;
+            &:hover {
+                background: $white;
+                border-color: $white;
+                color: $green;
+            }
+        }
+
+        textarea {
+            height: 100px;
+            margin: 10px 0;
+        }
+    }
+
+    @keyframes messageBoxOn {
+        from {
+            transform: translateY(-100%);
+        }
+    }
+    @keyframes messageBoxOff {
+        to {
+            transform: translateY(-100%);
+        }
+    }
+}

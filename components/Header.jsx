@@ -1,7 +1,23 @@
 import Link from 'next/link';
 import React from 'react';
 
-const Header = ({ cate }) => {
+const Header = ({ cate, setDisplayMessageBox, displayMessageBox }) => {
+
+    const closeMessageBox = () => {
+        document.getElementById("messageBox").style.animation = "messageBoxOff 0.3s both"
+        setTimeout(() => {
+            setDisplayMessageBox(false)
+        }, 300)
+    }
+
+    const handleMessage = () => {
+        if(displayMessageBox == true) {
+            closeMessageBox()
+        } else {
+            setDisplayMessageBox(true)
+        }
+    }
+
     return (
         <div className='header'>
             <nav>
@@ -26,13 +42,12 @@ const Header = ({ cate }) => {
                         <p>Nasa api</p>
                     </div>
                 </Link>
-                <Link href="/">
-                    <div className="lien">
-                        <i class="fa-solid fa-comment"></i>
-                        <p>Contact</p>
-                        <p></p>
-                    </div>
-                </Link>
+
+                <div onClick={handleMessage} className={displayMessageBox ? "lien lien--actif" : "lien"}>
+                    <i class="fa-solid fa-comment"></i>
+                    <p>Contact</p>
+                    <p></p>
+                </div>
             </nav>
         </div>
     );
