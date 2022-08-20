@@ -1,7 +1,9 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
+import MessageBox from './profile/MessageBox';
 
-const Header = ({ cate, setDisplayMessageBox, displayMessageBox }) => {
+const Header = ({ cate}) => {
+    const [displayMessageBox, setDisplayMessageBox] = useState(false)
 
     const closeMessageBox = () => {
         document.getElementById("messageBox").style.animation = "messageBoxOff 0.3s both"
@@ -19,6 +21,7 @@ const Header = ({ cate, setDisplayMessageBox, displayMessageBox }) => {
     }
 
     return (
+        <>
         <div className='header'>
             <nav>
                 <Link href="/" >
@@ -50,6 +53,11 @@ const Header = ({ cate, setDisplayMessageBox, displayMessageBox }) => {
                 </div>
             </nav>
         </div>
+
+        {
+            displayMessageBox && <MessageBox setDisplayMessageBox={setDisplayMessageBox} displayMessageBox={displayMessageBox}/> 
+        }
+        </>
     );
 };
 
